@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #4a4466;
+}
+
+.input-container {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.input {
+  display: flex;
+  height: 30px;
+  width: 30px;
+  border: 1px solid white;
+  text-align: center;
+  background-color: #9fcbad;
+  border: none;
+}
+
+.input:focus,
+.input:active {
+  border: 2px solid #f1f7d4;
+  outline: none;
+}
+
+.guesses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guesses {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  width: 100%;
+  margin: 2px 0px;
+}
+
+.guess-container {
+  display: flex;
+  gap: 3px;
+}
+
+.guess {
+  height: 30px;
+  width: 30px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.guesses > p {
+  margin: 0;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.invalid-input {
+  border-color: red;
+}
+.msg {
+  color: white;
+}
