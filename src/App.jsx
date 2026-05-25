@@ -40,6 +40,7 @@ export default function App() {
       const updatedNum = [...num];
       updatedNum[position] = value;
       setNum(updatedNum);
+      setMessage("");
     } else {
       setMessage("repeated value not allowed");
     }
