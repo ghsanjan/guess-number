@@ -8,6 +8,8 @@ export default function App() {
   const [won, setWon] = useState(false);
   //const [error, setError] = useState(false);
   const ref = useRef([]);
+  const numRef = useRef([]);
+
   useEffect(() => {
     generateRandom4Digit(ref);
   }, []);
@@ -41,6 +43,9 @@ export default function App() {
       updatedNum[position] = value;
       setNum(updatedNum);
       setMessage("");
+      if (position < numRef.current.length - 1) {
+        numRef.current[position + 1].focus();
+      }
     } else {
       setMessage("repeated value not allowed");
     }
@@ -168,6 +173,7 @@ export default function App() {
             pattern="[0-9]"
             maxLength={1}
             value={n}
+            ref={(el) => (numRef.current[index] = el)}
             onChange={(e) => handleChange(e, index)}
           />
         ))}
